@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class WarehouseController {
 
     @PostMapping("/capacity-check")
-    public String something(@RequestBody WarehouseService warehouseService){
+    public String something(@RequestBody Warehouse warehouse){
         String capacityMessage = String.format("There is space for %s with ID %s",
-                warehouseService.getProductName(), warehouseService.getProductID());
+                warehouse.getProductName(), warehouse.getProductID());
         return capacityMessage;
     }
 }

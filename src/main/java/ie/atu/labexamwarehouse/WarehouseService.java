@@ -1,13 +1,15 @@
 package ie.atu.labexamwarehouse;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Service;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.ArrayList;
+
+@Service
 public class WarehouseService {
-    private String productName;
-    private String productID;
+    ArrayList<Warehouse> warehouse = new ArrayList<warehouse>();
+    public String addProduct(Warehouse warehouse) {
+        String message = "ProductID: " + warehouse.getWarehouseID();
+        warehouse.add(warehouse);
+        return message;
+    }
 }
